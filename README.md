@@ -59,12 +59,16 @@ var p float32 = 3.14  // 32-bit float
 var arr [5] int
 fmt.Println(arr)
 
-// Initializing 
+// Initializing
 // arr := [5] int{1,3,2,5,7}
 //fmt.Println(arr)
 
 // Initializing 
 // arr := [...] int{1,3,2,5,7}
+//fmt.Println(arr)
+
+// Initializing slize
+// arr := [] int{1,3,2,5,7}
 //fmt.Println(arr)
 
 import ( 
@@ -84,22 +88,106 @@ fmt.Println(reflect.TypeOf(arr),len(arr),cap(arr)
 ```
 fmt.Printf("%v %v\n",a ,b )
 ```
-![imga](https://i.imgur.com/T4PW26H.png)
+
+https://yourbasic.org/golang/fmt-printf-reference-cheat-sheet/
+
+![img](https://i.imgur.com/T4PW26H.png)
 
 ## Control flow
 ### If, else, else if
 ```go
-var number int
+var day sting
 fmt.Scanln(&number)
+noClass:=1
 
-if number > 0
-	fmt.Printf("%d is positive",number)
-else if number <0 
-	fmt.Printf("%d is negative",number)
+if day == "Sunday" || day == "Saturday" {
+	sleep()
+} else if day == "Wednesday" && noClass == true 
+	sleep()
 else
-    fmt.Print("Given number is 0")
+    study()
   
  ```
+ ### For Loop
+
+ ```go
+ for num := 0; num <= 10; num++ {
+  fmt.Println("This is", num)
+}
+ ```
+### Switch case
+
+```go
+var log_level int
+switch log_level {
+    case 1 :
+        fmt.Println("Log level : Off")
+    case 2 :
+        fmt.Println("Log level : Error")
+    case 3 :
+        fmt.Println("Log level : Warning")
+    default:
+        fmt.Println("Log level : Info")
+}
+```
+### For - Range loop
+```go
+cs_club := []string{"CP","EDITH","Networking","PRIT"}
+for i,div := range cs_club {
+    fmt.Printf("%d) %s\n",i+1,div)
+}
+```
+ ### While loop
+ ```go
+
+// function gets input and returns it
+// func <function name> (<parameters>) (<return types>){ ...}
+func get()(number int)
+{
+    var number int
+    fmt.Scanln(&number)
+    return
+}
 
 
+secret := 12
+guess :=0
+
+//while loop
+for guess !=secret{
+    guess=getint()
+}
+
+ ```
+## Functions
+
+
+## Interface 
+```go
+// Interface
+type Shape interface {
+  Area() float64
+  Perimeter() float64
+}
+
+// Struct
+type Rectangle struct {
+  Length, Width float64
+}
+
+// Methods
+func (r Rectangle) Area() float64 {
+  return r.Length * r.Width
+}
+
+func (r Rectangle) Perimeter() float64 {
+  return 2 * (r.Length + r.Width)
+}
+
+
+func main() {
+  var r Shape = Rectangle{Length: 3, Width: 4}
+  fmt.Printf("Type of r: %T, Area: %v, Perimeter: %v.", r, r.Area(), r.Perimeter())
+}
+```
 
