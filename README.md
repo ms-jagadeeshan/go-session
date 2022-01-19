@@ -160,7 +160,53 @@ for guess !=secret{
 
  ```
 ## Functions
+```go
+// function gets input and returns it
+// func <function name> (<parameters>) (<return types>){ ...}
+func get()(int)
+{
+    var number int
+    fmt.Scanln(&number)
+    return number
+}
 
+
+// Multiple return values
+// func get()(int)
+// {
+//     var number,index int
+//     fmt.Scanln(&index)
+//     fmt.Scanln(&number)
+//     return index,number
+// }
+
+// Named return values
+// func get()(index , number int)
+// {
+//     fmt.Scanln(&index)
+//     fmt.Scanln(&number)
+//     return
+// }
+
+
+secret := 12
+guess :=0
+index:=0
+//while loop
+for guess !=secret{
+    index,guess=getint()
+}
+
+// Lambdas
+for guess !=secret{
+    index,guess=func()(index,number int){
+      fmt.Scanln(&index)
+      fmt.Scanln(&number) 
+      return
+    }
+}
+
+```
 
 ## Interface 
 ```go
