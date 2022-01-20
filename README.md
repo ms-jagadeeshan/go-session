@@ -35,7 +35,8 @@ $ go build hello.go
 var mystr string
 mystr = "Hello world!"
 // or in short form
-// mystr := "Hello world!
+// mystr := "Hello world!   (only inside fuction)
+
 
 // Multiline string
 str1:=`asfj
@@ -67,9 +68,13 @@ fmt.Println(arr)
 // arr := [...] int{1,3,2,5,7}
 //fmt.Println(arr)
 
-// Initializing slize
-// arr := [] int{1,3,2,5,7}
-//fmt.Println(arr)
+//Initializing slize
+myslice := [] int{1,3,2,5,7}
+fmt.Println(arr)
+myslice = append(myslice,1)
+fmt.Println(myslice)
+// https://gist.github.com/GimmyHchs/33bd06e68d72a913a8587b09d41b50d0
+
 
 import ( 
    "fmt"
@@ -90,7 +95,8 @@ fmt.Printf("%v %v\n",a ,b )
 ```
 
 https://yourbasic.org/golang/fmt-printf-reference-cheat-sheet/
-
+https://www.w3schools.com/go/go_formatting_verbs.php
+![img](./img2.png)
 ![img](https://i.imgur.com/T4PW26H.png)
 
 ## Control flow
@@ -118,9 +124,10 @@ else
 ### Switch case
 
 ```go
+// Multicase also supported
 var log_level int
 switch log_level {
-    case 1 :
+    case 1,4 :
         fmt.Println("Log level : Off")
     case 2 :
         fmt.Println("Log level : Error")
@@ -136,6 +143,11 @@ cs_club := []string{"CP","EDITH","Networking","PRIT"}
 for i,div := range cs_club {
     fmt.Printf("%d) %s\n",i+1,div)
 }
+
+// '_' omits the value
+// for _,div := range cs_club {
+//     fmt.Printf("%s\n",i+1,div)
+// }
 ```
  ### While loop
  ```go
