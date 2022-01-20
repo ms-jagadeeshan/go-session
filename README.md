@@ -208,16 +208,6 @@ index:=0
 for guess !=secret{
     index,guess=getint()
 }
-
-// Lambdas
-for guess !=secret{
-    index,guess=func()(index,number int){
-      fmt.Scanln(&index)
-      fmt.Scanln(&number) 
-      return
-    }
-}
-
 ```
 
 ## Interface 
