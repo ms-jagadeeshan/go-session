@@ -19,7 +19,6 @@ import "fmt"
 
 // special function(same as `int main()` in c++), which is called when program is executed
 func main(){
-	
     // printf("Hello world!")
     fmt.Println("Hello world!")
 }
@@ -83,6 +82,14 @@ import (
 
 fmt.Println(reflect.TypeOf(arr),len(arr),cap(arr)
 
+// Pointers
+var ptr *int
+num :=  3
+*ptr = 2
+fmt.Println(*ptr)
+ptr = &a
+fmt.Println(*ptr)
+
 ```
 
 ## Formatting
@@ -94,8 +101,7 @@ fmt.Println(reflect.TypeOf(arr),len(arr),cap(arr)
 fmt.Printf("%v %v\n",a ,b )
 ```
 
-https://yourbasic.org/golang/fmt-printf-reference-cheat-sheet/
-https://www.w3schools.com/go/go_formatting_verbs.php
+
 ![img](./img2.png)
 ![img](https://i.imgur.com/T4PW26H.png)
 
@@ -169,7 +175,6 @@ guess :=0
 for guess !=secret{
     guess=getint()
 }
-
  ```
 ## Functions
 ```go
@@ -238,4 +243,23 @@ func main() {
   fmt.Printf("Type of r: %T, Area: %v, Perimeter: %v.", r, r.Area(), r.Perimeter())
 }
 ```
+## Notes
 
+```go
+// Gives error 
+func some_func()
+{
+  return
+}
+
+// Correct syntax
+func some_func(){
+  return
+}
+```
+Also gives error, if unused variables are there
+
+## References
+https://devhints.io/go
+https://yourbasic.org/golang/fmt-printf-reference-cheat-sheet/
+https://www.w3schools.com/go/go_formatting_verbs.php
