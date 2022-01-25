@@ -1,4 +1,4 @@
-# Go lang session - draft
+# Go lang session
 
 ## Installation
 ### Ubuntu 
@@ -260,6 +260,6 @@ func some_func(){
 Also gives error, if unused variables are there
 
 ## References
-https://devhints.io/go
-https://yourbasic.org/golang/fmt-printf-reference-cheat-sheet/
-https://www.w3schools.com/go/go_formatting_verbs.php
+https://devhints.io/go     
+https://yourbasic.org/golang/fmt-printf-reference-cheat-sheet/      
+https://www.w3schools.com/go/go_formatting_verbs.php    
